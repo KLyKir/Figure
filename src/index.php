@@ -47,3 +47,4 @@ if(isset ($_POST)) {
 <p>Perimeter: <?php echo $Figure->getPerimeter()?></p>
 </body>
 </html>
+<DFE>
