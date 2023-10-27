@@ -2,17 +2,17 @@
 
 class Circle extends Figure
 {
-    public function __construct(public  int $width = 100,public string $color = "",public string $circle = "border-radius: 50%")
+    public function __construct(protected int $width = 100,protected string $color = "",private string $circle = "border-radius: 50%")
     {
         parent::__construct($width, $color);
     }
 
     public function getArea(){
-        return M_PI * pow($this->width, 2);
+        return round(M_PI * pow($this->width, 2), 2);
     }
 
     public function getPerimeter() {
-        return 2 * M_PI * $this->width;
+        return round(2 * M_PI * $this->width, 2);
     }
 
     public function getAttributes() {

@@ -2,17 +2,17 @@
 
 class Square extends Figure
 {
-    public function __construct(public int $width = 100,public string $color = "")
+    public function __construct(protected int $width = 100,protected string $color = "")
     {
         parent::__construct($width, $color);
     }
 
     public function getArea() {
-        return $this->width * $this->width;
+        return round($this->width * $this->width);
     }
 
     public function getPerimeter() {
-        return $this->width * 4;
+        return round($this->width * 4);
     }
 
     public function getAttributes() {

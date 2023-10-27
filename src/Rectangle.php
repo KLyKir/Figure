@@ -2,17 +2,17 @@
 
 class Rectangle extends Figure
 {
-    public function __construct(public int $width = 100, public string $color = "", public int $height = 200)
+    public function __construct(protected int $width = 100, protected string $color = "", private int $height = 200)
     {
         parent::__construct($width, $color);
     }
 
     public function getArea(){
-        return $this->width * $this->height;
+        return round($this->width * $this->height, 2);
     }
 
     public function getPerimeter() {
-        return $this->width * 2 + $this->height * 2;
+        return round($this->width * 2 + $this->height * 2, 2);
     }
 
     public function getAttributes() {

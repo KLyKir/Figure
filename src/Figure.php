@@ -2,7 +2,7 @@
 
 class Figure
 {
-    public function __construct(public int $width = 100, public string $color = "")
+    public function __construct(protected int $width = 100, protected string $color = "")
     {
     }
 }
